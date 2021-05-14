@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth ;
+}
+a{
+    cursor: url('img/pointer.png'), pointer !important;
+    text-decoration: none;
+}
+#menubtn{
+    z-index: 9;
+    color: white;
+    position: fixed;
+    right: 20px;
+    top: 55px;
+    font-size:40px;
+    cursor:pointer
+}
+body{
+    cursor:url('img/cursor.png'), pointer !important;
+    overflow-x: hidden;
+}
+.opener{
+    filter: blur(0px);
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: url(x) no-repeat center;
+    background-size: 30%;
+    background-color: black;
+}
+
+.name{
+  font-weight: 200;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.644);
+    position: absolute;
+    right: 90px;
+    top: 10px;
+}
+#logo{
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#logo img{
+    width: 4%;
+    background-color: rgba(255, 255, 255, 0.801);
+}
+.maintext h1{
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+}
+.maintext{
+  margin-top: 5%;
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.mainArrow{
+  text-shadow: 0 8px 1px rgba(255, 255, 255, 0.712);
+  color: rgb(255, 255, 255) !important;
+}
+.cl {
+  text-decoration: none;
+}
+
+.cl::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.781);
+  transition: width 0.5s;
+}
+
+.cl:hover::after {
+  width: 100%;
+}
+#quote{
+    font-weight: 200;
+    font-style: italic;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 500px;
+    font-size: 40px;
+    width: 23%;
+    
+}
+/* ---------------------Loading */
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:99;
+  height:100vh;
+  width: 100%;
+  background:rgb(0, 0, 0);
+}
+.loading .logo{
+  width: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  padding-top:20%;
+}
+@keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+    opacity:1;  
+    animation: flickerAnimation 1.7s infinite;
+}
+/* -----------------------Loading F */
+
+
+   /* --------------------------NAV */
+   .menuToggle{
+     transition: 0.3s ease-in-out;
+    position: fixed;
+    top: 15px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #00000000 url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: inset 5px;
+    background-size: 30px;
+    cursor: pointer;
+    z-index: 15;
+}
+.nav{
+    backdrop-filter: blur(15px);
+    border-radius: 35px 0 0 35px;
+    position: fixed;
+    top: 0;
+    left: calc(100% - 0px);
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.651);
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+}
+.nav.active{
+    left: 1100px;
+}
+.nav ul{
+    margin-left: -65%;
+}
+.nav ul li{
+    padding-bottom: 20px;
+    position: relative;
+    list-style: none;
+    text-align: left;
+}
+.nav ul li a{
+  transition: 0.3s ease-in-out;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+.fa{
+    font-size: 27px;
+}
+.nav ul li a:hover{
+    color: #ffffff;
+  }
+.socialBar{
+    position: absolute;
+    top:0;
+    left: 0px;
+    margin-right: -100px;
+    width: 60px;
+    height: 100%;
+    border-right:1px solid rgba(0, 0, 0, 0.712) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialBar ul{
+  margin-right: -35px;
+}
+
+.menuToggle.active{
+  top: 0px;
+    background: #ff0011cc url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: inset 5px;
+    background-size: 25px;
+    cursor: pointer;
+}
+  /* ---------------------------NavFinish */
+/* ------------------------------CanvasOffMenu------------------ */
+.mainav{
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+#imzaname{
+    padding: 5px 15px;
+    font-size: 25px;
+    float: left !important;
+}
+.mainav li{
+    float: right;
+    padding: 5px 15px;
+    font-size: 25px;
+    text-align: right;
+}
+/* --------------------Glitch */
+     /* ScrollBar_____________________________ */
+     html {
+        --scrollbarBG: #000000;
+        --thumbBG: #070707;
+      }
+      body::-webkit-scrollbar {
+        width: 3px;
+      
+      }
+      body {
+        scrollbar-width:thick;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+      
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG) ;
+        border-radius: 6px;
+        border: 1px solid var(--scrollbarBG);
+      }
+      /* ______________________________________________ */
+/* Tiny reset thingy */
+body,html{margin:0;padding:0;}
+
+.wrapper {  
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+.sectionn {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+.static {
+    width: 95%;
+    margin-left: 5%;
+  background: rgba(0, 0, 0, 0.541);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.static .box{
+    margin-right: 25% !important;
+    margin: 0px;
+    padding-top: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 80%;
+}
+.box:hover  h1{
+    color: white;
+
+}
+.box h1{
+    color: rgba(255, 255, 255, 0.603);
+    width: 22%;
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+input{
+    display: block !important;
+    background-color: rgba(255, 255, 255, 0.075);
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    height: 35px;
+    width: 220px;
+    border-radius: 5px;
+}
+textarea{
+  margin-left: 3%;
+    border: 2px solid rgba(255, 255, 255, 0.822);
+    transition: ease-in-out;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.027);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 8px;
+    width: 550px;
+    animation: txt 3s ease-in-out 1;
+}
+@keyframes txt {
+    from {width: 150px;}
+    to {width: 550px;}
+  }
+  textarea::placeholder{
+    padding-top: 7px;
+    padding-left: 5px;
+    font-size: 20px;
+  }
+::placeholder{
+    padding-left: 12px;
+}
+.butn{
+    display: block;
+    transition: 0.5s ease-in-out;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 35px;
+}
+.butn:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: none;
+}
+
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('https://placekitten.com/g/900/700');
+}
+
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+
+
+@media only screen and (max-width:768px){
+  .opener{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: url(X) no-repeat;
+    background-size: 60%;
+    background-position: 110% 40%;
+    background-color: black;
+}
+.loading .logo{
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  padding-top:20%;
+}
+#logo{
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#logo img{
+  width: 12%;
+  background-color: rgba(255, 255, 255, 0.801);
+}
+.nav{
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.205);
+  left: 100%;
+}
+.nav ul{
+margin-left: -30%;
+}
+.nav ul li a{
+font-size: 2em;
+color: rgb(0, 0, 0);
+text-decoration: none;
+font-weight: 600;
+}
+.nav.active{
+  left: 150px;
+}
+.socialBar{
+ display: none;
+}
+.name{
+  font-weight: 200;
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.719);
+  position: absolute;
+  right: 90px;
+  top: 10px;
+  display: none;
+}
+.maintext h1{
+  padding: 10px 0px;
+  font-weight: 100;
+  font-size: 40px;
+  color: white;
+}
+.maintext{
+  margin-top: 5%;
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#quote{
+  display: none;
+  
+}
+.row{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  display: block !important;
+  background-color: rgba(255, 255, 255, 0.075);
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  height: 35px;
+  width: 220px;
+  border-radius: 5px;
+}
+textarea{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.822);
+  transition: ease-in-out;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 8px;
+  width: 270px;
+  animation: txt 3s ease-in-out 1;
+}
+@keyframes txt {
+  from {width: 150px;}
+  to {width: 270px;}
+}
+.sectionn {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 65vh;
+  
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.static{
+  padding-left: 18%;
+  margin-right: auto;
+  backdrop-filter: blur(3px);
+  margin: 0px;
+  padding-top: 0px;
+  background-color: rgba(0, 0, 0, 0.719);
+  width: 95%;
+}
+button{
+  display: block;
+  transition: 0.5s ease-in-out;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  width: 100px;
+  height: 35px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box h1{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.774);
+  width: 100%;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+
+
+
+
+}
+
+@media only screen and (max-width:400px){
+  .sectionn {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 76vh;
+    
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+  }
+}
+

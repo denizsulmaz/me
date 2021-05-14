@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+#menubtn{
+    color: white;
+    font-size:40px;
+    cursor:pointer
+}
+body{
+  cursor:url('img/cursor.png'), pointer !important;
+  background-color: black;
+    overflow-x: hidden;
+}
+.opener{
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.delinres{
+  
+  display: flex;
+  flex-direction: row;
+}
+.mpcs{
+  font-weight: 300;
+  color: white;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+
+
+     /* ScrollBar_____________________________ */
+     html {
+      --scrollbarBG: #000000;
+      --thumbBG: #ffffff;
+    }
+    body::-webkit-scrollbar {
+      width: 8px;
+    
+    }
+    body {
+      scrollbar-width:thick;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 1px solid var(--scrollbarBG);
+    }
+    /* ______________________________________________ */
+
+
+
+
+/* -------------------canvasMenu------------------------------- */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #0c0c0f;
+  animation: sideanim 12s;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-left: 0px !important;
+  border: 4px solid whitesmoke;
+}
+  
+@keyframes sideanim{
+  from{
+    border: 0px solid rgba(245, 245, 245, 0);
+  }
+  to{
+   
+    border: 4px solid whitesmoke;
+  }
+}
+
+#menuhover:hover{
+  border: 4px solid white ;
+}
+.altmenuhover{
+  font-size: 35px !important;
+}
+hr{
+  justify-content: center;
+  display: flex;
+  margin-left: 18%;
+  width: 200px;
+  height: 1px;
+  color: gray;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+/* ------------------------------CanvasOffMenu------------------ */
+.mainav ul{
+    width: 100%;
+    
+    display: flex !important;
+    flex-direction: row !important;
+}
+.mainav{
+  width: 100%;
+  padding: 15px 0px;
+  top: 0;
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0.46011908181241246) 0%, rgba(0,0,0,0.6898109585631127) 49%, rgba(0,0,0,0.9839286056219363) 100%);
+  z-index: 9;
+    position: fixed;
+}
+#imzaname{
+    left: 20px;
+    color: rgba(255, 255, 255, 0.445);
+    padding-right: 300px;
+    font-size: 35px;
+}
+#imzaname:hover a{
+  transition: 1s;
+  
+  color: rgba(255, 255, 255, 0.938);
+}
+.mainav li{
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.37);
+    padding: 5px 15px;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.493);
+}
+.mainav li a:hover{
+  color: rgba(255, 255, 255, 0.74);
+}
+.mainav li a{
+  padding: 5px 15px;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.363);
+}
+#selected{
+  color: white;
+  box-shadow: -2px 2px 1px white;
+  animation: box 4s ease;
+}
+
+@keyframes box {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: -2px 2px 1px white;
+  }
+}
+
+
+
+
+.ftr{
+  
+  width: 80%;
+margin-left: 10%;
+margin-right: 10%;
+background-color: black;
+}
+.ft{
+  height: 15vh;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: rgb(32, 32, 32);
+}
+.ft address{
+  color: rgba(255, 255, 255, 0.705);
+  font-weight: 900;
+  padding-left: 20px;
+  padding-top: 60px;
+}
+.ft #ftlogo{
+  width: 3.5%;
+  margin-top: -50px;
+  margin-right: 40px;
+  float: right;
+}
+.social{
+  border: 3px solid rgba(255, 255, 255, 0.795);
+  border-radius: 50px;
+  width: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+.social:hover{
+  transition: ease 0.3s;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.37);
+}
+.social i{
+  color: white;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 30px;
+}
+#so1{
+  color: #ff7700;
+}
+ 
+.landingvideo{
+  border-radius: 15px;
+  background: url(img/port.png) no-repeat center;
+  background-size: 100%;
+  height: 50vh;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgb(0, 0, 0);
+}
+@media only screen and (max-width:700px) {
+  .landingvideo{
+    border-radius: 15px;
+    background: url(img/port.png) no-repeat center;
+    background-size: 100%;
+    height: 50vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(0, 0, 0);
+  }
+  .mpcs{
+    font-weight: 300;
+    color: white;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+  .delinres{
+    display: none;
+  }
+  #imzaname{
+    padding-top: 7px;
+    font-weight: 200;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    padding-right: 0px;
+    font-size: 25px;
+}
+#imzaname a{
+  color: white;
+}
+.social{
+  transition: 0.7s ease-in-out;
+  border: 3px solid rgba(255, 255, 255, 0.795);
+  border-radius: 50px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15%;
+  display: flex;
+  justify-content: center;
+}
+/* ------footer */
+
+.ftr{
+width: 94%;
+margin-left: auto;
+margin-right: auto;
+background-color: black;
+}
+.ft{
+  height: 20vh;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: rgb(32, 32, 32);
+}
+.ft address{
+  color: rgba(255, 255, 255, 0.705);
+  font-weight: 900;
+  padding-left: 20px;
+  padding-top: 25px;
+}
+.ft #ftlogo{
+  width: 7%;
+  margin-top: 7%;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+/* -------footer */
+  
+}

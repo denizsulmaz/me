@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/DSLOGO.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="about.css">
+ 
+
+    <title>DS | About</title>
+</head>
+<body>
+    <section class="opener" id="main">      
+      <div class="mainav">          
+        <ul>
+            <span onclick="openNav()" id="menubtn">&#9776;</span>
+            <li id="imzaname" ><a href="index.html">Deniz Sulmaz</a> </li>
+        </ul>
+    </div>              
+        <br><br><br><br><br>
+        <div class="border">
+          <div class="bordercontent">
+            <h1>About/Whoami</h1>
+            <p>Hi, I'm Deniz Sulmaz <br> I am currently working in frontend development. But apart from my software interests, I am also closely interested in design, music and sports.
+              I am also an entrepreneur.
+              Although I am currently working in the frontend department in the software field, I am thinking of working in other areas on a long-term basis and I am developing myself in this direction.
+              I have a long way to go in the field of design, instead of staying only in the field of photography/painting, I will also turn to the video editing part of the design.
+              In the field of sports, I am currently interested in bodybuilding and dance. In the field of music, I am working on music production, which I intended to do professionally in the beginning, but currently only for hobby purposes.
+              Even though I already have a busy life, I think this is what makes me active and brings out my creativity.</p>  
+          </div>
+        </div>
+        <div class="border" id="vision">
+          <div class="bordercontent">
+            <h1>Vision</h1>
+            <p>I am happy to acquire new information at every moment of my life, to constantly improve myself and to spread it around. <br>
+              When I come to a certain point in my career, I aim to develop projects in the name of "equality and justice" and to ensure that nobody, especially children, experiences inequality of opportunity in education.         <br>     My first goal in my career journey is to break the taboo that a person can only work in one field. Later, I will be trying to break down stereotypes in every field I work in.
+              See you soon with my new projects in the light of Science - Art - Sports</p>
+          </div>
+        </div>
+        <div class="border" id="contact">
+          <div class="bordercontent">
+           <a href="index.html"><h1 style="text-align: center;">Contact</h1></a>
+            <br>
+            <div class="row-contact">
+            <li><a href="mailto:denizsulmaz0@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/denizsulmaz/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.github.com/denizsulmaz/"><i class="fab fa-github"></i> </a></li>
+            <li><a href="https://denizsulmaz.medium.com/"><i class="fab fa-medium"></i></a></li>
+            <li><a href="https://mintable.app/u/denizsulmaz"><i class="fab fa-ethereum"></i> </a></li>
+            <li><a href="https://biolinky.co/denizsulmaz"><i class="fa fa-link"></i> </a></li>
+          </div>
+          </div>
+        </div> 
+
+
+
+</section>
+
+
+
+<div class="ftr">
+  <div class="ft">
+  <address>© 2021 Developed and Designed by DS</address>
+  <a href="index.html"><img src="img/DSLOGO.png" id="ftlogo" alt=""></a>
+  </div>  
+</div>
+
+
+    
+    
+    
+
+    
+   <!-- ----------Canvas------- -->
+   <div id="mySidenav" class="sidenav"><div class="hovertest">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <br><br>  
+    <a id="menuhover" href="about.html">About</a>
+    <hr>
+    <a class="altmenuhover" href="software.html">Software</a>
+    <a class="altmenuhover" href="design.html">Design</a>
+    <a class="altmenuhover" href="music.html">Music</a>
+    <a class="altmenuhover" href="sport.html">Sport</a>
+</div></div>
+<!-- ----------Canvas------- -->
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.getElementById("main").style.filter = "blur(15px)";
+          document.body.style.backgroundColor = "rgb(0,0,0,)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.getElementById("main").style.filter = "blur(0px)";
+          document.body.style.backgroundColor = "black";
+        }
+        </script>
+        <!-- ------------ -->
+        <script>
+          AOS.init();
+        </script>
+</body>
+</html>

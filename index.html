@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/DSLOGO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/0.900.25/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Deniz Sulmaz | Portfolio</title>
+</head>
+<body>
+  <div id="loading" class="loading"><img  class="logo animate-flicker" src="img/DSLOGO.png"></div>
+<!-- <span onclick="openNav()" id="menubtn">&#9776;</span> -->
+
+<section class="opener  parallax" id="main">
+    <div id="logo">
+        <img  oncontextmenu="return false" onselectstart="return false" ondragstart="return false" src="img/animated.svg" alt="">
+    </div>
+    <h1 class="name">Deniz Sulmaz</h1>
+    <div class="maintext">
+        <a class="cl"    href="design.html"><h1>Design</h1></a>
+        <a class="cl"    href="software.html"><h1>Software</h1></a>
+        <a class="cl"    href="music.html"><h1>Music</h1>        </a>
+        <a class="cl"    href="sport.html"><h1>Sport</h1></a>
+        <br><br><br>
+        <a class="mainArrow"   href="#go"><i class="fa fa-angle-down"></i></a>
+    </div>
+
+    <!-- <q id="quote"> To Innovative and Creative Future...</q> -->
+
+</section>
+  
+<div class="menuToggle" onclick="toggleMenu();"></div>
+    
+<div class="nav" onclick="toggleMenu();">
+    <ul>
+        <li><a id="menuhover" href="about.html">About</a></li>
+        <li><a id="menuhover" href="about.html#vision">Vision</a>
+        <li> <a id="menuhover" href="about.html#contact">Contact</a></li>
+        <hr>
+        <br>
+        <li><a class="altmenuhover" href="software.html">Software</a></li>
+        <li><a class="altmenuhover" href="design.html">Design</a></li>
+        <li><a class="altmenuhover" href="music.html">Music</a></li>
+        <li><a class="altmenuhover" href="sport.html">Sport</a></li>
+
+    </ul>
+    <div class="socialBar">
+        <ul>
+            <li><a href="https://www.instagram.com/deniz_sulmaz/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/denizsulmaz/"><i class="fa fa-linkedin"></i></a> </li>
+            <li><a href="https://t.me/denizsulmaz"><i class="fa fa-telegram"></i></a></li>
+            <li><a href="https://denizsulmaz.medium.com/"><i class="fa fa-medium"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ----------Canvas------- -->
+<div  class="sectionn static">
+    <div id="btn" class="box">
+        <h1>Contact Me</h1>
+        <br>    
+        <form onsubmit = "return false" >
+            <div class="row">
+                <div class="column" >
+            <input type = "text" placeholder = "Name Surname" id = "nameField" required>
+            <input type = "email" placeholder = "E-mail" id = "emailField" required>
+                </div>
+            <textarea name="Message" cols="30" rows="5" placeholder="Your Message" id= "messageField"></textarea>
+            </div>
+            <button id="go"  type="submit" class="butn" onclick = "writeData ()"> Send</button>
+        </form>
+</div>
+</div>
+
+<script>
+   function toggleMenu(){
+          var menuToggle = document.querySelector('.menuToggle');
+          var nav = document.querySelector('.nav');
+          menuToggle.classList.toggle('active');
+          nav.classList.toggle('active');
+      }
+    // function openNav() {
+    //     document.getElementById("mySidenav").style.width = "300px";
+    //     document.getElementById("main").style.marginLeft = "300px";
+    //     document.getElementById("main").style.filter = "blur(15px)";
+    //     document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+    // }
+
+    // function closeNav() {
+    //     document.getElementById("mySidenav").style.width = "0";
+    //     document.getElementById("main").style.marginLeft = "0";
+    //     document.getElementById("main").style.filter = "blur(0px)";
+    //     document.body.style.backgroundColor = "white";
+    // }
+
+    window.onload = function() {
+  document.getElementById('loading').style.display = 'none';
+};
+
+    const form = document.getElementsByTagName("form")[0];
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBPlQ5YSy9PW2ljJt-45Bd_6iHazZV2Si4",
+  authDomain: "ds-portfolio-messages.firebaseapp.com",
+  projectId: "ds-portfolio-messages",
+  databaseURL:
+    "https://ds-portfolio-messages-default-rtdb.europe-west1.firebasedatabase.app/",
+  storageBucket: "ds-portfolio-messages.appspot.com",
+  messagingSenderId: "384668786390",
+  appId: "1:384668786390:web:a8d731eba35635a4297377",
+  measurementId: "G-TT0EQ47TCD"
+};
+
+// Functions
+
+function firebaseInit() {
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  console.log("Firebase has been initialized");
+}
+
+function writeData() {
+  firebase
+    .database()
+    .ref("User")
+    .push({
+      name: document.getElementById("nameField").value,
+      email: document.getElementById("emailField").value,
+      message: document.getElementById("messageField").value
+    });
+
+  clearForm();
+  console.log("Form data has been sent");
+}
+
+function clearForm() {
+  form.reset();
+  console.log("Form fields have been cleared");
+}
+// Initialize
+window.addEventListener("DOMContentLoaded", () => {
+  firebaseInit();
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+ 
+ var e = document.getElementById("go");
+
+ e.addEventListener("click", function() {
+
+     alert("Thanks");
+
+ }, false);
+
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/DSLOGO.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
+   
+    <link rel="stylesheet" href="music.css">
+    <title>DS | Music</title>
+</head>
+<body>
+    <section class="opener" id="main">   
+      <div class="mainav">         
+        <ul>
+            <span onclick="openNav()" id="menubtn">&#9776;</span>
+            <li id="imzaname" ><a href="index.html">Deniz Sulmaz</a> </li>
+            <div class="delinres">
+            <li><a href="design.html"> Design</a></li>
+            <li><a  href="software.html"> Software</a></li>
+            <li><a id="selected" href="music.html"> Music</a></li>
+            <li><a href="sport.html"> Sport</a></li></div>
+        </ul>
+    </div>  
+        <br><br><br><br><br>
+    <!-- ------------------Video/Photo Place  -->
+
+    <div class="landingvideo">
+      
+    </div>
+    <h1 class="mpcs">Music Player Coming Soon</h1>
+</section>
+<!-- <div class="social">
+<a  href="https://soundcloud.com/denizsulmaz"><i id="so1" class="fa fa-soundcloud"></i></a>
+</div> -->
+
+
+<div class="ftr">
+  <div class="ft">
+  <address>© 2021 Developed and Designed by DS</address>
+  <a href="index.html"><img src="img/DSLOGO.png" id="ftlogo" alt=""></a>
+  </div>  
+</div>
+
+
+    
+    
+    
+
+    
+   <!-- ----------Canvas------- -->
+   <div id="mySidenav" class="sidenav"><div class="hovertest">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a id="menuhover" href="about.html">About</a>
+    <hr>
+    <a class="altmenuhover" href="software.html">Software</a>
+    <a class="altmenuhover" href="design.html">Design</a>
+    <a class="altmenuhover" href="music.html">Music</a>
+    <a class="altmenuhover" href="sport.html">Sport</a>
+</div></div>
+<!-- ----------Canvas------- -->
+
+
+
+
+          
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+          document.getElementById("main").style.marginLeft = "300px";
+          document.body.style.backgroundColor = "rgb(0,0,0,)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "black";
+        }
+
+    
+        </script>
+</body>
+</html>
