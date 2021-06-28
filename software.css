@@ -237,7 +237,17 @@ background: linear-gradient(0deg, rgba(0,0,0,0.46011908181241246) 0%, rgba(0,0,0
     box-shadow: -2px 2px 1px white;
   }
 }
-
+.copplinn img{
+  padding: 30px;
+  box-sizing: border-box;
+}
+.copplinn h1{
+  font-weight: 400 !important;
+}
+.copplinn p{
+  font-size: 15px;
+ font-weight: 500;
+}
 .theCard{
   display: block;
   margin-left: auto;
