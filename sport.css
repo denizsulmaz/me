@@ -258,7 +258,7 @@ background-color: black;
 }
 .danceimg{
     border: 2px solid white;
-    background: url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/kafkas.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/kafkas.webp') no-repeat center;
     background-size: 100%;
     margin-left: 3%;
     height: 95vh;
@@ -285,7 +285,7 @@ background-color: black;
 }
 .fitnessimg{
     border: 2px solid rgb(255, 255, 255);
-    background: url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/fitness.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/denizsulmaz/portfoliocdn/main/fitness.webp') no-repeat center;
     background-size: 105%;
     margin-right: 3%;
     height: 80vh;
@@ -318,7 +318,7 @@ background-color: black;
   }
   .danceimg{
     border: 2px solid white;
-    background: url(img/kafkas.png) no-repeat center;
+    background: url(img/kafkas.webp) no-repeat center;
     background-size: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -348,7 +348,7 @@ background-color: black;
 }
 .fitnessimg{
     border: 2px solid rgb(255, 255, 255);
-    background: url(img/fitness.png) no-repeat center;
+    background: url(img/fitness.webp) no-repeat center;
     background-size: 105%;
     margin-right: 3%;
     height: 50vh;
